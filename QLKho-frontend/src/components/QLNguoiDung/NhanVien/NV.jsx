@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../../QuanLy.css";
 import fetchWithAuth from "../../../services/axiosConfig";
 
-const API_BASE = "http://localhost:4000/api/nhanvien";
+
+
+const API_BASE = `${import.meta.env.VITE_API_BASE}/nhanvien`;
 
 function NV() {
   const [items, setItems] = useState([]);

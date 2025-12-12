@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import fetchWithAuth from "../../../services/axiosConfig";
 import "../../QuanLy.css";
 
-const API_BASE = "http://localhost:4000/api/taikhoan";
+
+const API_BASE = `${import.meta.env.VITE_API_BASE}/taikhoan`;
 
 function TaiKhoan() {
   const [items, setItems] = useState([]);
