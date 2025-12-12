@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { MdOutlineStore, MdInventory } from "react-icons/md";
 import { FaBoxOpen, FaClipboardList } from "react-icons/fa";
 import { SiCloudflareworkers } from "react-icons/si";
-import "./Sidebar.css";
+import "./SideBar.css";
 
 const SideBar = () => {
   return (
