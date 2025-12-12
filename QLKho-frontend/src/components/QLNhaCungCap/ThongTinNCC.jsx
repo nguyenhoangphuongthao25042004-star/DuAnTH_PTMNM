@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./ThongTinNCC.css";
 
-const API_BASE = "http://localhost:4000/api/nhacc";
+
+const API_BASE = `${import.meta.env.VITE_API_BASE}/nhacc`;
+
 
 function ThongTinNCC() {
   const { id } = useParams(); // id ở đây là MaNCC

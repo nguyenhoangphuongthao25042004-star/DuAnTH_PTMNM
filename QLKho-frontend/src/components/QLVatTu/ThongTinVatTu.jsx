@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import './ThongTinVatTu.css';
 
-const API_BASE = "http://localhost:4000/api/vattu";
+
+const API_BASE = `${import.meta.env.VITE_API_BASE}/vattu`;
+
 const ENDPOINTS = {
   create: `${API_BASE}/create`,
   detail: (ma) => `${API_BASE}/detail/${ma}`,        // backend dùng /detail/:MaVT

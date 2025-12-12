@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "../QuanLy.css";
 import fetchWithAuth from "../../services/axiosConfig";
 
-const API_BASE = "http://localhost:4000/api/nhacc";
+const API_BASE = `${import.meta.env.VITE_API_BASE}/nhacc`;
+
 
 function NCC() {
   const [items, setItems] = useState([]);

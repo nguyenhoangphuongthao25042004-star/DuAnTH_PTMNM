@@ -3,7 +3,8 @@ import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import fetchWithAuth from "../../services/axiosConfig";
 
-const API_BASE = "http://localhost:4000/api/vattu";
+
+const API_BASE = `${import.meta.env.VITE_API_BASE}/vattu`;
 
 function VatTu() {
   const [items, setItems] = useState([]);
