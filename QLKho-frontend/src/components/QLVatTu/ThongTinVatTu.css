@@ -1,0 +1,165 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+       
+        .form-header {
+            background-color: #e74c3c; 
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+      
+        .form-content {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+       
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+   
+        .form-group label {
+            width: 120px; 
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            max-width: 300px; 
+        }
+
+    
+        .full-width-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            max-width: 100%; 
+        }
+
+        .full-width-label {
+            font-weight: bold;
+            color: #333;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .thongtin-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Tiêu đề có “khung” đỏ nhạt */
+        .thongtin-container h2 {
+            margin: 0 0 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #991b1b;             /* đỏ đậm */
+            background: #fee2e2;        /* nền đỏ nhạt */
+            border: 1px solid #fecaca;  /* viền đỏ nhạt */
+            border-radius: 10px;
+            padding: 10px 14px;
+        }
+
+        .thongtin-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-row label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .form-row input,
+        .form-row select {
+            height: 40px;
+            padding: 0 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-row input:focus,
+        .form-row select:focus {
+            border-color: #ef4444;                 /* nhấn mạnh đỏ */
+            box-shadow: 0 0 0 3px #fee2e2;         /* viền sáng đỏ nhạt */
+        }
+
+        .form-row input[type="number"] {
+            width: 150px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            height: 40px;
+            padding: 0 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        /* Nút chính tông đỏ */
+        .btn-primary {
+            background: #dc2626;   /* đỏ */
+            color: #fff;
+            border: 1px solid #dc2626;
+        }
+        .btn-primary:hover {
+            background: #b91c1c;   /* đỏ đậm hơn */
+            border-color: #b91c1c;
+        }
+
+        /* Nút phụ đỏ nhạt */
+        .btn-secondary {
+            background: #fef2f2;   /* nền đỏ rất nhạt */
+            color: #7f1d1d;        /* chữ đỏ đậm nhẹ */
+            border: 1px solid #fecaca;
+        }
+        .btn-secondary:hover {
+            background: #fee2e2;
+        }

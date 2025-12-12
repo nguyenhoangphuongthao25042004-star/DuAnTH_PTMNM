@@ -1,0 +1,93 @@
+.thongtin-tk-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Tiêu đề khung đỏ nhạt */
+.thongtin-tk-container h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #991b1b;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.thongtin-tk-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-row input,
+.form-row select {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px #fee2e2;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Nút chính đỏ */
+.btn-primary {
+  border: 1px solid #dc2626;
+  background: #dc2626;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+/* Nút phụ đỏ nhạt */
+.btn-secondary {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #7f1d1d;
+}
+.btn-secondary:hover {
+  background: #fee2e2;
+}

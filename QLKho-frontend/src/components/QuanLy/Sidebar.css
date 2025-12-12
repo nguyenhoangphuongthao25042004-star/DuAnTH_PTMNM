@@ -1,0 +1,321 @@
+/* Reset */
+html, body, #root { height: 100%; }
+body { margin: 0; }
+* { box-sizing: border-box; }
+
+:root {
+  --ql-sidebar-w: 250px;
+}
+
+/* Tổng thể bố cục trang admin */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f5f6fa;
+  font-family: "Inter", sans-serif;
+  color: #2f3640;
+}
+
+/* Sidebar cố định */
+.admin-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 250px;
+  height: 100vh;
+  background: #f8fafc;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.admin-sidebar-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+/* Header - không bo góc, chữ màu tối */
+.sidebar-header {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 12px;
+  background: #ffffff;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1f2937;              /* màu tối gần đen */
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Menu (cuộn được) */
+.sidebar-menu {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Link item */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-link:hover {
+  background: #eef2ff;
+  color: #1e40af;
+}
+.sidebar-link.active {
+  background: #dbeafe;
+  color: #1e40af;
+  border-left: 3px solid #1e40af;
+}
+
+/* Icon + label */
+.sidebar-icon {
+  font-size: 18px;
+  width: 22px;
+  display: inline-flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sidebar-label {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Submenu */
+.sidebar-submenu {
+  margin: 0;
+  padding: 0;
+}
+.sidebar-submenu > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #374151;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-submenu > summary:hover {
+  background: #eef2ff;
+  color: #1e40af;
+}
+.sidebar-submenu > summary::-webkit-details-marker {
+  display: none;
+}
+.sidebar-caret {
+  margin-left: auto;
+  color: #6b7280;
+  transition: transform 0.2s;
+}
+.sidebar-submenu[open] > summary .sidebar-caret {
+  transform: rotate(180deg);
+}
+
+.sidebar-submenu__items {
+  margin: 6px 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 2px solid #e5e7eb;
+  padding-left: 10px;
+}
+.sidebar-sublink {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-sublink:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Footer bám đáy, không bị che */
+.sidebar-footer {
+  margin-top: auto;
+  flex-shrink: 0;              /* không co lại */
+  font-size: 11px;
+  color: #4b5563;              /* màu tối hơn để rõ */
+  text-align: center;
+  padding: 12px 8px;
+  border-top: 1px solid #e5e7eb;
+  background: #f8fafc;
+  line-height: 1.6;
+}
+.sidebar-footer p {
+  margin: 3px 0;
+}
+
+/* Main area */
+.admin-main {
+  margin-left: 250px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f2f6;
+  min-height: 100vh;
+}
+
+/* Header main */
+header,
+.admin-main > .HeaderBar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdde1;
+}
+
+/* Content */
+.admin-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: #f9f9fb;
+}
+
+.admin-content .card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+.admin-content .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar QuanLy (tĩnh) */
+.ql-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--ql-sidebar-w);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  border-right: 1px solid #e5e7eb;
+  padding: 10px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Header */
+.ql-sidebar__header {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 8px;
+  background: #ffffff;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1f2937; /* tối */
+  text-align: center;
+}
+
+/* Menu (cuộn được) */
+.ql-sidebar__menu {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 4px;
+}
+
+/* Link item */
+.ql-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin: 4px 0;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.ql-link:hover {
+  background: #eef2ff;
+  color: #1e40af;
+}
+.ql-link.active {
+  background: #dbeafe;
+  color: #1e40af;
+  border-left: 3px solid #1e40af;
+}
+
+/* Icon + label */
+.ql-icon { font-size: 18px; width: 22px; display: inline-flex; justify-content: center; }
+.ql-label { font-size: 14px; white-space: nowrap; }
+
+/* Submenu (details/summary) */
+.ql-submenu { margin-top: 6px; }
+.ql-submenu > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #374151;
+  transition: background 0.2s, color 0.2s;
+}
+.ql-submenu > summary:hover { background: #eef2ff; color: #1e40af; }
+.ql-submenu > summary::-webkit-details-marker { display: none; }
+.ql-caret { margin-left: auto; color: #6b7280; transition: transform 0.2s; }
+.ql-submenu[open] > summary .ql-caret { transform: rotate(180deg); }
+
+.ql-submenu__items {
+  margin: 6px 0 0 32px;
+  display: grid;
+  gap: 6px;
+  border-left: 2px solid #e5e7eb;
+  padding-left: 10px;
+}
+.ql-sublink {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.ql-sublink:hover { background: #f3f4f6; color: #111827; }
+
+/* Footer bám đáy */
+.ql-sidebar__footer {
+  margin-top: auto;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .admin-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .admin-main {
+    margin-left: 0;
+  }
+}

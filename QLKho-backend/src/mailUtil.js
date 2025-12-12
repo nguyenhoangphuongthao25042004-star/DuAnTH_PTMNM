@@ -1,0 +1,11 @@
+const transporter = require("./config/mail");
+const sendEmail = async ({ to, subject, html }) => {
+  return transporter.sendMail({
+    from: process.env.EMAIL_FROM,
+    to,
+    subject,
+    html,
+  });
+};
+
+module.exports = sendEmail;

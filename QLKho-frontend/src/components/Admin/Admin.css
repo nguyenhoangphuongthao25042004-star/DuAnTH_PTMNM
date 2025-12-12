@@ -1,0 +1,83 @@
+/* Tổng thể bố cục trang admin */
+.admin-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f6fa;
+  font-family: "Inter", sans-serif;
+  color: #2f3640;
+}
+
+/* Sidebar bên trái */
+.admin-sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #273c75 0%, #192a56 100%);
+  color: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+.admin-sidebar:hover {
+  width: 270px;
+}
+
+/* Khu vực chính */
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f2f6;
+}
+
+/* Thanh header */
+header,
+.admin-main > .HeaderBar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdde1;
+}
+
+/* Nội dung chính */
+.admin-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: #f9f9fb;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Card nội dung mẫu bên trong Outlet */
+.admin-content .card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.admin-content .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive (màn hình nhỏ) */
+@media (max-width: 992px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: none;
+  }
+
+  .admin-main {
+    flex: 1;
+  }
+
+  .admin-content {
+    padding: 16px;
+  }
+}
