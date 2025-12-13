@@ -16,6 +16,7 @@ import NhanVien from './components/NhanVien/NhanVien.jsx';
 import ResetPass from './components/Header/ResetPass.jsx';
 import ForgotPass from "./components/home/ForgotPass.jsx";
 import ResetForgotPass from "./components/home/ResetForgotPass";
+import QLKho from "./components/QLKho/test.jsx";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="thongtinnv" element={<ThongTinNV />} />
           <Route path="thongtinnv/:id" element={<ThongTinNV />} />
           <Route path="resetpass" element={<ResetPass />} />
+          <Route path="phieunhap" element={<Test />} />
         </Route>
         <Route path="NhanVien" element={<NhanVien />}>
           <Route index element={<VatTu />} />
