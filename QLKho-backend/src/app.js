@@ -22,12 +22,20 @@ app.use('/api/nhacc', nhaccRoutes);
 app.use('/api/nhanvien', nhanvienRoutes);
 app.use('/api/taikhoan', taikhoanRoutes);
 
-module.exports = app;
+//module.exports = app;
 // trigger backend deploy
+
+
 app.get("/api/test-ci", (req, res) => {
   res.json({
     message: "CI/CD Backend OK 🎉",
     time: new Date().toLocaleString(),
   });
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
