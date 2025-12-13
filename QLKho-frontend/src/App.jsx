@@ -16,7 +16,7 @@ import NhanVien from './components/NhanVien/NhanVien.jsx';
 import ResetPass from './components/Header/ResetPass.jsx';
 import ForgotPass from "./components/home/ForgotPass.jsx";
 import ResetForgotPass from "./components/home/ResetForgotPass";
-import QLKho from "./components/QLKho/test.jsx";
+import Test from "./components/QLKho/test.jsx";
 
 function App() {
   return (
