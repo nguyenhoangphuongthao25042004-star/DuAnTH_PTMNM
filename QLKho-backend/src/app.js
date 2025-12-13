@@ -3,8 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
 // Import routes
-const authRoutes = require('./routes/authRoute');
+/* const authRoutes = require('./routes/authRoute');
 const vattuRoutes = require('./routes/vattuRoute');
 const nhaccRoutes = require('./routes/nhaccRoute');
 const nhanvienRoutes = require('./routes/nhanvienRoute');
@@ -20,7 +26,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/vattu', vattuRoutes);
 app.use('/api/nhacc', nhaccRoutes);
 app.use('/api/nhanvien', nhanvienRoutes);
-app.use('/api/taikhoan', taikhoanRoutes);
+app.use('/api/taikhoan', taikhoanRoutes); */
 
 //module.exports = app;
 // trigger backend deploy
