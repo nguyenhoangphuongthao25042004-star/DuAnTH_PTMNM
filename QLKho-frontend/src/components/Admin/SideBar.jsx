@@ -43,7 +43,7 @@ const SideBar = () => {
             <span className="sidebar-caret">▾</span>
           </summary>
           <div className="sidebar-submenu__items">
-            <Link to="phieu-nhap" className="sidebar-sublink">Quản Lý Phiếu Nhập Kho</Link>
+            <Link to="phieunhap" className="sidebar-sublink">Quản Lý Phiếu Nhập Kho</Link>
             <Link to="phieu-xuat" className="sidebar-sublink">Quản Lý Phiếu Xuất Kho</Link>
           </div>
         </details>
