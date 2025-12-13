@@ -24,3 +24,10 @@ app.use('/api/taikhoan', taikhoanRoutes);
 
 module.exports = app;
 // trigger backend deploy
+app.get("/api/test-ci", (req, res) => {
+  res.json({
+    message: "CI/CD Backend OK 🎉",
+    time: new Date().toLocaleString(),
+  });
+});
+
