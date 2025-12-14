@@ -8,38 +8,80 @@ function Test() {
       style={{
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background: "#0f172a",
-        color: "white",
-        fontFamily: "Arial",
+        background: "linear-gradient(135deg, #4f46e5, #06b6d4)",
+        fontFamily: "Segoe UI, sans-serif",
       }}
     >
-      <h1>🚀 CI/CD TEST – React + Vercel</h1>
-
-      <p style={{ fontSize: "18px" }}>
-        Nếu bạn thấy trang này thay đổi sau khi push code → CI/CD hoạt động ✅
-      </p>
-
-      <h2>Counter: {count}</h2>
-
-      <button
-        onClick={() => setCount(count + 1)}
+      <div
         style={{
-          padding: "10px 20px",
-          fontSize: "16px",
-          borderRadius: "8px",
-          border: "none",
-          cursor: "pointer",
+          background: "white",
+          padding: "40px",
+          borderRadius: "20px",
+          width: "420px",
+          textAlign: "center",
+          boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
         }}
       >
-        ➕ Tăng
-      </button>
+        {/* Badge */}
+        <div
+          style={{
+            display: "inline-block",
+            background: "#22c55e",
+            color: "white",
+            padding: "6px 14px",
+            borderRadius: "999px",
+            fontSize: "14px",
+            fontWeight: "600",
+            marginBottom: "20px",
+          }}
+        >
+          CI/CD DEPLOY SUCCESS
+        </div>
 
-      <p style={{ marginTop: "30px", opacity: 0.7 }}>
-        Build time: {new Date().toLocaleString()}
-      </p>
+        <h1 style={{ marginBottom: "10px", color: "#1f2933" }}>
+          🚀 React + Vercel
+        </h1>
+
+        <p style={{ color: "#4b5563", marginBottom: "30px" }}>
+          Nếu bạn thấy giao diện này → deploy mới đã chạy thành công ✅
+        </p>
+
+        {/* Counter Card */}
+        <div
+          style={{
+            background: "#f1f5f9",
+            borderRadius: "16px",
+            padding: "25px",
+            marginBottom: "20px",
+          }}
+        >
+          <h2 style={{ fontSize: "28px", marginBottom: "15px" }}>
+            🔢 Counter: {count}
+          </h2>
+
+          <button
+            onClick={() => setCount(count + 1)}
+            style={{
+              padding: "12px 24px",
+              fontSize: "16px",
+              borderRadius: "10px",
+              border: "none",
+              cursor: "pointer",
+              background: "#4f46e5",
+              color: "white",
+              fontWeight: "600",
+            }}
+          >
+            ➕ Tăng giá trị
+          </button>
+        </div>
+
+        <p style={{ fontSize: "13px", color: "#6b7280" }}>
+          🕒 Build time: {new Date().toLocaleString()}
+        </p>
+      </div>
     </div>
   );
 }
