@@ -45,7 +45,7 @@ function Test() {
         </h1>
 
         <p style={{ color: "#4b5563", marginBottom: "30px" }}>
-          Nếu bạn thấy giao diện này → deploy mới đã chạy thành công ✅
+          <h1> Chiều thứ hai - ca 3</h1>
         </p>
 
         {/* Counter Card */}
